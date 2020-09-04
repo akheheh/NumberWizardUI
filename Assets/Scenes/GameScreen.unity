@@ -398,9 +398,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.3537736, g: 0.5032318, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.16509432, g: 0.6899484, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.33333334, g: 0.48627454, b: 0.9607844, a: 1}
     m_PressedColor: {r: 0.31278923, g: 0.6698113, b: 0.5323982, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.33333334, g: 0.48627454, b: 0.9607844, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -531,7 +531,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.3537736, g: 0.5032318, b: 1, a: 1}
     m_HighlightedColor: {r: 0.16509432, g: 0.6899484, b: 1, a: 1}
     m_PressedColor: {r: 0.31278923, g: 0.6698113, b: 0.5323982, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.33333334, g: 0.48627454, b: 0.9607844, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -550,7 +550,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 655114318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 910387558}
+        m_MethodName: OnPressCorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &655114318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,7 +874,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.3537736, g: 0.5032318, b: 1, a: 1}
     m_HighlightedColor: {r: 0.16509432, g: 0.6899484, b: 1, a: 1}
     m_PressedColor: {r: 0.31278923, g: 0.6698113, b: 0.5323982, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.33333334, g: 0.48627454, b: 0.9607844, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -960,8 +971,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9405cce459fe8459b69fda8e83b8d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 0
-  min: 0
+  max: 1001
+  min: 1
+  guessText: {fileID: 1278272782}
 --- !u!4 &910387559
 Transform:
   m_ObjectHideFlags: 0

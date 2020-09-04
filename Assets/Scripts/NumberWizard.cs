@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//TMPro if using TextMesh Pro.  Since we aren't using this, we can ignore it
+using TMPro;
+using UnityEngine.UI;
 
 public class NumberWizard : MonoBehaviour {
 
     [SerializeField] int max;
     [SerializeField] int min;
+    [SerializeField] TextMeshProUGUI guessText;
     int guess;
 
     // Use this for initialization
@@ -16,30 +20,29 @@ public class NumberWizard : MonoBehaviour {
 	
     void StartGame()
     {   
-        max = max + 1;
-        guess = (max + min) / 2 ;
+        //guess = (max + min) / 2 ;
+        NextGuess();
     }
 
 	// Update is called once per frame
     
     public void OnPressHigher() {
-        min = guess;
+        min = guess + 1;
         NextGuess();
     }
 
     public void OnPressLower() {
-        max = guess;
+        max = guess - 1;
         NextGuess();
     }
 
     public void OnPressCorrect() {
-        Debug.Log("I am a genius!");
-        StartGame();
+
     }
   
     void NextGuess()
     {
-        guess = (max + min) / 2;
-        Debug.Log("Is it higher or lower than..." + guess);
+        guess = Random.Range(min, max + 1);
+        guessText.text = guess.ToString();
     }
 } 
